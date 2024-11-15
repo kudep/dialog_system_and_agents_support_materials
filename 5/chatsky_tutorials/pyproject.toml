@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "chatsky-tutorials"
+version = "0.1.0"
+description = ""
+authors = ["Denis Kuznetsov <kuznetsov.den.p@gmail.com>"]
+readme = "README.md"
+packages = [{include = "chatsky_tutorials"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+services-api = {path = "../../4/ds_services/common_packages/services_api", develop = true}
+chatsky = "^0.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
