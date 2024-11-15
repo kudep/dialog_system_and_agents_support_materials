@@ -67,3 +67,6 @@ class IntentCatcherResponse(BaseModel):
 
 model = RemoteRunnable("http://intent_catcher:8000")
 chain = model | PydanticOutputParser(pydantic_object=IntentCatcherResponse)
+
+proxy_model = RemoteRunnable("http://0.0.0.0:8001")
+proxy_chain = proxy_model | PydanticOutputParser(pydantic_object=IntentCatcherResponse)

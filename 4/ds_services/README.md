@@ -2,8 +2,8 @@
 ### Run a service
 ```bash
 # step 1 run proxed services
-export COMPOSE_FILE=compose.proxy.yaml
-# set -x COMPOSE_FILE compose.proxy.yaml
+export COMPOSE_FILE=compose.*.yaml
+# set -x COMPOSE_FILE compose.*.yaml
 docker compose up -d --build
 # step 2 run your local service
 export COMPOSE_FILE=compose.base.yaml:compose.dev.yaml

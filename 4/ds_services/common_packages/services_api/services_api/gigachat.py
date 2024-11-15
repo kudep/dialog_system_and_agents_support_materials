@@ -14,3 +14,6 @@ class GigachatResponse(BaseModel):
 
 model = RemoteRunnable("http://gigachat:8000")
 chain = model | PydanticOutputParser(pydantic_object=GigachatResponse)
+
+proxy_model = RemoteRunnable("http://0.0.0.0:8006")
+proxy_chain = proxy_model | PydanticOutputParser(pydantic_object=GigachatResponse)

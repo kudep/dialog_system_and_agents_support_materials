@@ -16,3 +16,9 @@ ru2en_chain = model | PydanticOutputParser(pydantic_object=TranslationResponse)
 
 model = RemoteRunnable("http://machine_translation:8000/en2ru")
 en2ru_chain = model | PydanticOutputParser(pydantic_object=TranslationResponse)
+
+proxy_model = RemoteRunnable("http://0.0.0.0:8005/ru2en")
+proxy_ru2en_chain = proxy_model | PydanticOutputParser(pydantic_object=TranslationResponse)
+
+proxy_model = RemoteRunnable("http://0.0.0.0:8005/en2ru")
+proxy_en2ru_chain = proxy_model | PydanticOutputParser(pydantic_object=TranslationResponse)
