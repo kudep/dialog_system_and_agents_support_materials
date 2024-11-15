@@ -1,8 +1,8 @@
 ## 3. Реализация и сервинг отдельных сервисов
 - Использование сервинга на основе специализированных фреймворков:
-  - Фреймворки обучения: TorchServe.
-  - Фреймворки инференса: LangServe.
-  - Фреймворки масштабного сервинга: Ray.
+  - Фреймворки обучения: [TorchServe](https://pytorch.org/serve/getting_started.html).
+  - Фреймворки инференса: [LangServe](https://python.langchain.com/docs/langserve/).
+  - Фреймворки масштабного сервинга: [Ray](https://docs.ray.io/en/latest/serve/tutorials/serve-ml-models.html).
 - Рекомендации по реализации:
   - Код-стайл и поддержка читаемости.
   - Покрытие тестами.
@@ -98,3 +98,19 @@ Ray — это распределённая система, предназнач
 - Отсутствие зависимости от внешних библиотек.
 Недостатки:
 - Усложнение поддержки и внесения изменений при масштабировании.
+
+
+
+```bash
+├── Dockerfile
+├── src
+│   ├── langchain_api.py
+│   └── model.py
+├── app.py
+├── poetry.lock
+├── pyproject.toml
+└── tests
+    ├── data.py
+    └── response_comparators.py
+├── test_app.py
+```
