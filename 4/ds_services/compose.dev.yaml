@@ -1,0 +1,26 @@
+services:
+
+  intent_catcher:
+    volumes:
+      - ./services/intent_catcher:/app
+    environment:
+      PYTHONDONTWRITEBYTECODE: 1
+
+  llm_llama3:
+    volumes:
+      - ./services/llm_llama3:/app
+    environment:
+      PYTHONDONTWRITEBYTECODE: 1
+
+  machine_translation:
+    volumes:
+      - ./services/machine_translation:/app
+    environment:
+      PYTHONDONTWRITEBYTECODE: 1
+
+  gigachat:
+    volumes:
+      - ./services/gigachat:/app
+    environment:
+      PYTHONDONTWRITEBYTECODE: 1
+

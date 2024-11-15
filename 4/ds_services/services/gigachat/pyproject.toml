@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "gigachat_service"
+version = "0.1.0"
+description = ""
+authors = ["Illia Dykanskyi"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langserve = {version = "^0.2.3", extras = ["server"]}
+sse-starlette = "^1.8.2"
+pytest = "^8.3.2"
+services-api = {path = "/common_packages/services_api", develop = true}
+langchain = "^0.2.14"
+langchain-community = "^0.2.12"
+fastapi = {extras = ["standard"], version = "^0.112.1"}
+pydantic-settings = "^2.4.0"
+uvicorn = "0.23.2"
+pydantic = "2.8.2"
+requests = "^2.0.0"
+gigachat = "^0.1.35"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

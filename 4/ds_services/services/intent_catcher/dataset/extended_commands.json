@@ -1,0 +1,255 @@
+{
+  "tags": [
+    {
+      "name": "tesla",
+      "selection_mode": "best"
+    },
+    {
+      "name": "unitree_go",
+      "selection_mode": "best"
+    }
+  ],
+  "intents": [
+    {
+      "name": "windshield_wipers",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?включ\\w*\\s+дворн\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "tesla"
+      ]
+    },
+    {
+      "name": "mirror_fold",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?слож\\w*\\s+зеркал\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "tesla"
+      ]
+    },
+    {
+      "name": "lock_doors",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?заблок\\w*\\s+двер\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "tesla"
+      ]
+    },
+    {
+      "name": "set_temperature",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?установ\\w*\\s+температ\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "tesla"
+      ]
+    },
+    {
+      "name": "ac_on",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?включ\\w*\\s+кондицион\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "tesla"
+      ]
+    },
+    {
+      "name": "call_contact",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?позвони)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "tesla"
+      ]
+    },
+    {
+      "name": "play_media",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?воспроизв\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "tesla"
+      ]
+    },
+    {
+      "name": "dance",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?танц\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "unitree_go"
+      ]
+    },
+    {
+      "name": "jump_turn",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?прыж\\w*\\s+с\\s+повор\\w*)",
+        "(?i)(^\\s?прыж\\w*\\s+и\\s+повор\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "unitree_go"
+      ]
+    },
+    {
+      "name": "tilt",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?наклон\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "unitree_go"
+      ]
+    },
+    {
+      "name": "follow",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?след\\w*\\s+за\\s+\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "unitree_go"
+      ]
+    },
+    {
+      "name": "search_view",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?найди\\w*\\s+\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "unitree_go"
+      ]
+    },
+    {
+      "name": "describe_view",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?опиши\\w*\\s+\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "unitree_go"
+      ]
+    },
+    {
+      "name": "search_data_base",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?обнов\\w*\\s+послед\\w*\\s+объект\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "unitree_go"
+      ]
+    },
+    {
+      "name": "question_view",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?что\\w*\\s+перед\\w*\\s+тобой\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "unitree_go"
+      ]
+    },
+    {
+      "name": "go_user",
+      "phrases": [],
+      "reg_phrases": [
+        "(?i)(^\\s?подойди\\w*\\s+ко\\w*\\s+мне\\w*)"
+      ],
+      "min_precision": 0.94,
+      "punctuation": [
+        ".",
+        "?"
+      ],
+      "tags": [
+        "unitree_go"
+      ]
+    }
+  ]
+}

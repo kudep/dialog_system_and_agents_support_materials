@@ -1,0 +1,80 @@
+services:
+
+  intent_catcher:
+    build:
+      context: .
+      dockerfile: services/intent_catcher/Dockerfile
+    restart: always
+    volumes:
+      - $HOME/.cache/huggingface/hub/:/root/.cache/huggingface/hub/
+      - ./common_packages:/common_packages
+      - intent_catcher_data:/data
+    environment:
+      CUDA_VISIBLE_DEVICES: 0
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: [ '0' ]
+              capabilities: [ gpu ]
+    networks:
+      - assistant-network
+
+  llm_llama3:
+    build:
+      context: .
+      dockerfile: services/llm_llama3/Dockerfile
+    volumes:
+      - $HOME/.cache/huggingface/hub/:/root/.cache/huggingface/hub/
+      - ./common_packages:/common_packages
+    environment:
+      CUDA_VISIBLE_DEVICES: 0
+      REPO_ID: "bartowski/Meta-Llama-3.1-8B-Instruct-GGUF"
+      FILENAME: "Meta-Llama-3.1-8B-Instruct-Q8_0.gguf"
+      N_GPU_LAYERS: -1
+      N_CTX: 8192
+      TEMPERATURE: 0.6
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: [ '0' ]
+              capabilities: [ gpu ]
+    networks:
+      - assistant-network
+
+  machine_translation:
+    build:
+      context: .
+      dockerfile: services/machine_translation/Dockerfile
+    restart: always
+    volumes:
+      - ./common_packages:/common_packages
+      - $HOME/.cache/huggingface/hub/:/root/.cache/huggingface/hub/
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: [ '0' ]
+              capabilities: [ gpu ]
+    networks:
+      - assistant-network
+
+  gigachat:
+    build:
+      context: .
+      dockerfile: services/gigachat/Dockerfile
+    volumes:
+      - ./common_packages:/common_packages
+    networks:
+      - assistant-network
+
+networks:
+  assistant-network:
+    driver: bridge
+
+volumes:
+  intent_catcher_data:

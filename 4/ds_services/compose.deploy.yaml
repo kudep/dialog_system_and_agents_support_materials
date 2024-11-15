@@ -1,0 +1,16 @@
+services:
+  intent_catcher:
+    ports:
+      - 8001:8000
+
+  llm_llama3:
+    ports:
+      - 8004:8000
+
+  machine_translation:
+    ports:
+      - 8005:8000
+
+  gigachat:
+    ports:
+      - 8006:8000
